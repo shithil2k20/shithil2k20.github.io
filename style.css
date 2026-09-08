@@ -269,6 +269,13 @@ main {
     font-size: 29px;
     margin-top: 8px;
 }
+.experience-link {
+    text-decoration: none;
+}
+
+.experience-link:hover {
+    text-decoration: underline;
+}
 
 .date {
     color: #666a70;
