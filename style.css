@@ -20,6 +20,7 @@ a {
   text-decoration: none;
 }
 
+
 /* =========================
    NAVBAR
 ========================= */
@@ -28,14 +29,19 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   max-width: 1120px;
   margin: auto;
+
   padding: 20px 28px;
+
   background: rgba(247, 247, 245, 0.94);
   backdrop-filter: blur(12px);
+
   border-bottom: 1px solid #deded9;
 }
 
@@ -46,10 +52,18 @@ a {
 
 nav {
   display: flex;
-  gap: 20px;
-  font-size: 13px;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-end;
+
+  gap: 28px;
+
+  margin-left: auto;
+
+  font-size: 14px;
+}
+
+nav a {
+  white-space: nowrap;
 }
 
 nav a:hover,
@@ -57,6 +71,7 @@ nav a:hover,
 .project-link:hover {
   text-decoration: underline;
 }
+
 
 /* =========================
    MAIN
@@ -68,16 +83,20 @@ main {
   padding: 0 28px;
 }
 
+
 /* =========================
    HERO
 ========================= */
 
 .hero {
   min-height: 78vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   max-width: 900px;
+
   padding: 90px 0;
 }
 
@@ -99,36 +118,52 @@ main {
 
 .hero h1 {
   font-size: clamp(48px, 8vw, 86px);
+
   line-height: 0.98;
+
   letter-spacing: -0.045em;
+
   margin: 18px 0;
 }
 
 .hero h2 {
   font-size: clamp(22px, 3vw, 34px);
+
   font-weight: 500;
+
   margin-bottom: 22px;
 }
 
 .hero-text {
   max-width: 760px;
+
   color: #5d6268;
+
   font-size: 18px;
 }
 
+
 /* =========================
-   HERO BUTTON AREA
+   HERO BUTTONS
 ========================= */
 
 .hero-buttons {
   display: flex;
+  align-items: center;
+
   gap: 14px;
+
   margin-top: 30px;
+
   padding-bottom: 28px;
+
   border-bottom: 1px solid #ddd;
+
   width: fit-content;
+
   flex-wrap: wrap;
 }
+
 
 /* =========================
    BUTTONS
@@ -136,11 +171,19 @@ main {
 
 .button {
   display: inline-block;
+
   padding: 11px 18px;
+
   border: 1px solid #24272b;
+
   border-radius: 7px;
+
   font-weight: 700;
-  transition: all 0.2s ease;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .button:hover {
@@ -149,6 +192,7 @@ main {
 
 .button.primary {
   background: #17191c;
+
   color: white;
 }
 
@@ -156,16 +200,21 @@ main {
   background: #2b2e32;
 }
 
+
 /* =========================
-   OLD BUTTON SUPPORT
+   OLD BUTTON CONTAINER
 ========================= */
 
 .buttons {
   display: flex;
+
   gap: 12px;
+
   margin-top: 30px;
+
   flex-wrap: wrap;
 }
+
 
 /* =========================
    SECTIONS
@@ -173,21 +222,27 @@ main {
 
 .section {
   padding: 100px 0;
+
   border-top: 1px solid #deded9;
 }
 
 .section h2 {
   font-size: clamp(32px, 5vw, 52px);
+
   letter-spacing: -0.035em;
+
   margin: 8px 0 28px;
 }
 
 .section > p:not(.section-label),
 .section-intro {
   max-width: 800px;
+
   color: #5d6268;
+
   font-size: 17px;
 }
+
 
 /* =========================
    STATS
@@ -195,8 +250,11 @@ main {
 
 .stats {
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
+
   gap: 14px;
+
   margin-top: 40px;
 }
 
@@ -206,7 +264,9 @@ main {
 .card,
 .featured-card {
   background: white;
+
   border: 1px solid #deded9;
+
   border-radius: 10px;
 }
 
@@ -225,9 +285,12 @@ main {
 
 .stat span {
   color: #6b7075;
+
   font-size: 13px;
+
   margin-top: 4px;
 }
+
 
 /* =========================
    EXPERIENCE
@@ -239,32 +302,42 @@ main {
 
 .experience-heading {
   display: flex;
+
   justify-content: space-between;
+
   gap: 20px;
+
   align-items: flex-start;
+
   padding-bottom: 22px;
+
   border-bottom: 1px solid #deded9;
 }
 
 .experience-heading h3 {
   font-size: 29px;
+
   margin-top: 8px;
 }
 
 .date {
   color: #666a70;
+
   font-size: 14px;
+
   white-space: nowrap;
 }
 
 .experience-card ul {
   margin: 24px 0 0 20px;
+
   color: #5d6268;
 }
 
 .experience-card li + li {
   margin-top: 8px;
 }
+
 
 /* =========================
    FEATURED RESEARCH
@@ -276,26 +349,35 @@ main {
 
 .featured-card h3 {
   max-width: 900px;
+
   font-size: clamp(25px, 4vw, 38px);
+
   line-height: 1.15;
+
   letter-spacing: -0.025em;
+
   margin: 16px 0;
 }
 
 .featured-card > p {
   color: #5d6268;
+
   max-width: 850px;
 }
 
 .research-grid {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 18px;
+
   margin: 30px 0;
 }
 
 .research-grid div {
   padding-top: 15px;
+
   border-top: 1px solid #deded9;
 }
 
@@ -306,21 +388,29 @@ main {
 
 .research-grid span {
   color: #74787d;
+
   font-size: 12px;
+
   text-transform: uppercase;
+
   letter-spacing: 0.08em;
 }
 
 .result {
   padding: 18px 0 0;
+
   border-top: 2px solid #17191c;
 }
 
 .result span {
   display: block;
+
   font-size: 11px;
+
   letter-spacing: 0.1em;
+
   font-weight: 800;
+
   margin-bottom: 5px;
 }
 
@@ -334,9 +424,12 @@ main {
 
 .coming-soon {
   color: #777;
+
   font-size: 13px;
+
   font-weight: 700;
 }
+
 
 /* =========================
    CARDS
@@ -344,7 +437,9 @@ main {
 
 .cards {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 18px;
 }
 
@@ -354,7 +449,9 @@ main {
 
 .card h3 {
   font-size: 21px;
+
   line-height: 1.25;
+
   margin: 14px 0;
 }
 
@@ -365,13 +462,20 @@ main {
 
 .status {
   display: inline-block;
+
   margin-top: 20px;
+
   padding: 5px 9px;
+
   background: #eeeeea;
+
   border-radius: 5px;
+
   font-size: 12px;
+
   font-weight: 700;
 }
+
 
 /* =========================
    PROJECTS
@@ -379,19 +483,25 @@ main {
 
 .project-list {
   margin-top: 25px;
+
   border-top: 1px solid #deded9;
 }
 
 .project {
   display: grid;
+
   grid-template-columns: 1fr 1.2fr;
+
   gap: 40px;
+
   padding: 25px 0;
+
   border-bottom: 1px solid #deded9;
 }
 
 .project h3 {
   font-size: 22px;
+
   margin-top: 4px;
 }
 
@@ -401,16 +511,22 @@ main {
 
 .project-link {
   display: inline-block;
+
   margin-top: 14px;
+
   font-weight: 800;
+
   font-size: 14px;
 }
 
 .project-link.disabled {
   color: #999;
+
   cursor: default;
+
   text-decoration: none;
 }
+
 
 /* =========================
    SKILLS
@@ -418,7 +534,9 @@ main {
 
 .skills-grid {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 18px;
 }
 
@@ -434,6 +552,7 @@ main {
   color: #5d6268;
 }
 
+
 /* =========================
    CV SECTION
 ========================= */
@@ -444,9 +563,12 @@ main {
 
 .small-note {
   margin-top: 18px;
+
   font-size: 13px !important;
+
   color: #777 !important;
 }
+
 
 /* =========================
    CONTACT
@@ -458,11 +580,16 @@ main {
 
 .contact-links {
   display: flex;
+
   gap: 28px;
+
   margin-top: 25px;
+
   font-weight: 700;
+
   flex-wrap: wrap;
 }
+
 
 /* =========================
    FOOTER
@@ -470,11 +597,16 @@ main {
 
 footer {
   padding: 30px 28px;
+
   text-align: center;
+
   border-top: 1px solid #deded9;
+
   color: #777;
+
   font-size: 13px;
 }
+
 
 /* =========================
    TABLET
@@ -483,7 +615,9 @@ footer {
 @media (max-width: 850px) {
 
   nav {
-    display: none;
+    gap: 18px;
+
+    font-size: 13px;
   }
 
   .stats,
@@ -504,33 +638,43 @@ footer {
 
   .date {
     display: block;
+
     margin-top: 8px;
   }
 
 }
 
+
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 520px) {
-
-  main {
-    padding: 0 20px;
-  }
+@media (max-width: 650px) {
 
   .navbar {
     padding: 18px 20px;
   }
 
+  nav {
+    display: none;
+  }
+
+  main {
+    padding: 0 20px;
+  }
+
   .hero {
     min-height: 70vh;
+
     padding: 70px 0;
   }
 
   .hero-buttons {
     width: 100%;
+
     gap: 10px;
+
+    padding-bottom: 24px;
   }
 
   .stats,
@@ -546,6 +690,37 @@ footer {
 
   .section {
     padding: 75px 0;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .button {
+    width: fit-content;
   }
 
 }
