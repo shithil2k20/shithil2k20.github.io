@@ -42,12 +42,15 @@ a {
 
 nav {
   display: flex;
-  gap: 24px;
-  font-size: 14px;
+  gap: 20px;
+  font-size: 13px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 nav a:hover,
-.contact-links a:hover {
+.contact-links a:hover,
+.project-link:hover {
   text-decoration: underline;
 }
 
@@ -96,7 +99,7 @@ main {
 }
 
 .hero-text {
-  max-width: 720px;
+  max-width: 760px;
   color: #5d6268;
   font-size: 18px;
 }
@@ -132,7 +135,8 @@ main {
   margin: 8px 0 28px;
 }
 
-.section > p:not(.section-label) {
+.section > p:not(.section-label),
+.section-intro {
   max-width: 800px;
   color: #5d6268;
   font-size: 17px;
@@ -146,6 +150,7 @@ main {
 }
 
 .stat,
+.experience-card,
 .skill-group,
 .card,
 .featured-card {
@@ -173,12 +178,45 @@ main {
   margin-top: 4px;
 }
 
+.experience-card {
+  padding: 34px;
+}
+
+.experience-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #deded9;
+}
+
+.experience-heading h3 {
+  font-size: 29px;
+  margin-top: 8px;
+}
+
+.date {
+  color: #666a70;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.experience-card ul {
+  margin: 24px 0 0 20px;
+  color: #5d6268;
+}
+
+.experience-card li + li {
+  margin-top: 8px;
+}
+
 .featured-card {
   padding: 36px;
 }
 
 .featured-card h3 {
-  max-width: 850px;
+  max-width: 900px;
   font-size: clamp(25px, 4vw, 38px);
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -187,7 +225,7 @@ main {
 
 .featured-card > p {
   color: #5d6268;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .research-grid {
@@ -215,22 +253,30 @@ main {
 }
 
 .result {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
   padding: 18px 0 0;
   border-top: 2px solid #17191c;
 }
 
 .result span {
+  display: block;
   font-size: 11px;
   letter-spacing: 0.1em;
   font-weight: 800;
+  margin-bottom: 5px;
 }
 
 .result strong {
   font-size: 18px;
+}
+
+.link-row {
+  margin-top: 22px;
+}
+
+.coming-soon {
+  color: #777;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .cards {
@@ -265,6 +311,7 @@ main {
 }
 
 .project-list {
+  margin-top: 25px;
   border-top: 1px solid #deded9;
 }
 
@@ -285,6 +332,19 @@ main {
   color: #777;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.project-link.disabled {
+  color: #999;
+  cursor: default;
+  text-decoration: none;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -301,6 +361,16 @@ main {
 
 .skill-group p {
   color: #5d6268;
+}
+
+.cv-section {
+  padding-bottom: 90px;
+}
+
+.small-note {
+  margin-top: 18px;
+  font-size: 13px !important;
+  color: #777 !important;
 }
 
 .contact {
@@ -323,7 +393,7 @@ footer {
   font-size: 13px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   nav {
     display: none;
   }
@@ -334,14 +404,19 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
+  .experience-heading,
   .research-grid,
   .project {
     grid-template-columns: 1fr;
   }
 
-  .result {
-    flex-direction: column;
-    align-items: flex-start;
+  .experience-heading {
+    display: block;
+  }
+
+  .date {
+    display: block;
+    margin-top: 8px;
   }
 }
 
@@ -365,7 +440,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .featured-card {
+  .featured-card,
+  .experience-card {
     padding: 24px;
   }
 
