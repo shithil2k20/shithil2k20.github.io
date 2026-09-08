@@ -270,6 +270,7 @@ main {
     margin-top: 8px;
 }
 .experience-link {
+    color: inherit;
     text-decoration: none;
 }
 
